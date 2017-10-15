@@ -2,13 +2,16 @@
   "name": "abv-core",
   "version": "0.0.1",
   "description": "Abvos core components",
+  "engines": {
+    "node": ">=6.11.3"
+  },
   "main": "index.js",
   "scripts": {
     "test": "mocha test/*.js"
   },
   "dependencies": {
-    "abv-ts": "0.0.1",
-    "abv-socket": "0.0.1"
+    "abv-ts": "tondy67/abv-ts",
+    "abv-socket": "tondy67/abv-socket"
   },
   "devDependencies": {
     "mocha": "^4.0.1",
