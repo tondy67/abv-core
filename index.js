@@ -6,7 +6,7 @@
 
 const ts = require('abv-ts')('abv:core');
 
-const Agent = require('./lib/agent.js');
+const Agent = require('./lib/Agent.js');
 
 const core = {
 	Agent: 		Agent
