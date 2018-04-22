@@ -5,7 +5,7 @@
 
 const log = console.log.bind(console);
 const assert = require('assert');
-const Agent = require('../lib/agent.js');
+const { CAgent } = require('../index.js');
 const WebSocket = require('ws');
 
 const port = 8888;
@@ -22,14 +22,14 @@ wss.on('connection', function (ws) {
   	
 });
 
-describe('Abvos Agent', function() {
-	describe('create new Agent', function() {
-		it('returns Agent', function() {
-	    	const sock = new Agent(); 
+describe('Abvos CAgent', function() {
+	describe('create new CAgent', function() {
+		it('returns CAgent', function() {
+	    	const sock = new CAgent(); 
 	    	assert(sock, 'No Socket?');
 	  	});
 		it('returns false if fake host', function() {
-	    	const sock = new Agent(); 
+	    	const sock = new CAgent(); 
 	    	const r = sock.connect('bla');
 			assert.equal(r, false, 'return> false');
 	  	});
@@ -37,7 +37,7 @@ describe('Abvos Agent', function() {
 
 	describe('send message', function() {
 		it('greeting', function(done) {
-	    	const sock = new Agent();
+	    	const sock = new CAgent();
 	    	sock.connect('http://127.0.0.1:' + port,WebSocket);
 	    	sock.on('msg',(msg) => { 
 	    		assert.equal(msg.b, greeting, 'msg: ' + greeting);

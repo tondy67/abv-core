@@ -1,17 +1,14 @@
 /**
  * Abvos core
  * @module abv-core
+ * https://github.com/tondy67/abv-core
  */
 "use strict";
 
 const ts = require('abv-ts')('abv:core');
 
-const Agent = require('./lib/Agent.js');
-
-const core = {
-	Agent: 		Agent
-}
+const CAgent = require('./lib/CAgent.js');
 
 module.exports = {
-	core: core
+	CAgent: 		CAgent
 };
