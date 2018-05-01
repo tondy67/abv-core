@@ -5,10 +5,16 @@
  */
 "use strict";
 
-const ts = require('abv-ts')('abv:core');
-
-const CAgent = require('./lib/CAgent.js');
+const Crypto = require('./lib/Crypto.js');
+const Pack = require('abv-pack');
+const Wallet = require('abv-wallet');
+const { XmlParser } = require("abv-parser");
+const JSZip = require("jszip");
 
 module.exports = {
-	CAgent: 		CAgent
+	Crypto: Crypto,
+	Wallet: Wallet,
+	Pack: Pack,
+	XmlParser: XmlParser,
+	Zip: JSZip	
 };
