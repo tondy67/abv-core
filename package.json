@@ -1,18 +1,18 @@
 {
   "name": "abv-core",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Abvos core components",
   "engines": {
     "node": ">=6.11.3"
   },
   "main": "index.js",
   "scripts": {
-    "test": "mocha test/*.js"
+    "test": "node test/*.js"
   },
   "dependencies": {
     "abv-pack": "0.0.1",
     "abv-parser": "0.0.1",
-    "abv-ts": "0.0.4",
+    "abv-ts": "0.0.5",
     "abv-wallet": "0.0.3",
     "elliptic": "^6.4.0",
     "jszip": "^3.1.5"
